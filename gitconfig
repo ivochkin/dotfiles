@@ -1,0 +1,27 @@
+[user]
+    name = Stanislav Ivochkin
+    email = isn@extrn.org
+[core]
+    whitespace = trailing-space,space-before-tab,tab-in-indent
+[apply]
+    whitespace = fix
+[log]
+    date = iso
+[alias]
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+    h = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative -n 15
+    hh = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative -n 25
+    hhh = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative -n 35
+    co = checkout
+    d = diff --color
+    dn = diff --color --name-only
+    b = branch -v --color
+    p = pull -p
+    bb = branch -va --color
+    s = status -s
+    com = checkout master
+    cod = checkout devel
+    i = log -n 1
+[color]
+    ui = true
