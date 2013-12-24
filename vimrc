@@ -47,8 +47,10 @@ highlight statusline guibg=white guifg=Blue
 match errorMsg /[\t]/
 match errorMsg /[ \t]\+$/
 
-au BufNewFile,BufRead *.cpp set syntax=cpp11
+au BufNewFile,BufRead *.c++ set syntax=cpp
 au BufNewFile,BufRead *.proto set syntax=proto
+au BufNewFile,BufRead *.ebnf set syntax=ebnf
+au BufNewFile,BufRead *.gprof set filetype=gprof
 
 " use ,F to jump to tag in a vertical split
 nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
