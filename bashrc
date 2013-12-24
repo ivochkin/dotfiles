@@ -14,7 +14,7 @@ alias go='git checkout'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias g="ack-grep"
+alias g="ack-grep --type-add cpp=.c++"
 alias time="/usr/bin/time -v"
 alias json_pretty="python -mjson.tool"
 
