@@ -44,8 +44,13 @@ set hlsearch
 set laststatus=2
 set statusline=%F%m%r%h%w\ [Format=%{&ff}]\ [File=%{&fileencoding}]\ [Enc=%{&encoding}]\ [Type=%Y]\ [%03.3b]\ [0x%02.2B]\ [%03.3c:%l:%L]\ [%o:%p%%]
 highlight statusline guibg=white guifg=Blue
-match errorMsg /[\t]/
-match errorMsg /[ \t]\+$/
+
+:au WinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
+let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
+:au WinEnter * let w:m2=matchadd('ErrorMsg', '[ \t\r]\+$', -1)
+let w:m2=matchadd('ErrorMsg', '[ \t\r]\+$', -1)
+:au WinEnter * let w:m2=matchadd('ErrorMsg', '[\t\r]', -1)
+let w:m2=matchadd('ErrorMsg', '[\r\t]', -1)
 
 au BufNewFile,BufRead *.c++ set syntax=cpp
 au BufNewFile,BufRead *.proto set syntax=proto

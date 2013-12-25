@@ -17,6 +17,8 @@ alias egrep='egrep --color=auto'
 alias g="ack-grep --type-add cpp=.c++"
 alias time="/usr/bin/time -v"
 alias json_pretty="python -mjson.tool"
+alias cmakedbg="cmake -DCMAKE_BUILD_TYPE=Debug"
+alias cmakerel="cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
