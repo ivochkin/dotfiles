@@ -36,6 +36,8 @@ set wildmenu
 set wcm=<Tab>
 set mouse=a
 set mousemodel=popup
+map <S-Insert> <MiddleMouse>
+map! <S-Insert> <MiddleMouse>
 set termencoding=utf8
 set acd
 set scrolljump=5
@@ -72,6 +74,11 @@ let g:DoxygenToolkit_commentType = "C++"
 let g:DoxygenToolkit_licenseTag = "@copyright Copyright (c) Stanislav Ivochkin"
 let g:DoxygenToolkit_authorName = "Stanislav Ivochkin <isn@extrn.org>"
 let g:DoxygenToolkit_versionString = "1"
+
+let g:localvimrc_sandbox = 0
+let g:localvimrc_ask = 0
+
+let g:autofenc_ext_prog_args = "-i -L ru"
 
 command Ctags :!pwd | xargs ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
 ab td /// @todo
