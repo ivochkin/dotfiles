@@ -39,6 +39,8 @@ set mousemodel=popup
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
 set termencoding=utf8
+set encoding=utf8
+set ff=unix
 set acd
 set scrolljump=5
 set scrolloff=5
@@ -47,11 +49,11 @@ set laststatus=2
 set statusline=%F%m%r%h%w\ [Format=%{&ff}]\ [File=%{&fileencoding}]\ [Enc=%{&encoding}]\ [Type=%Y]\ [%03.3b]\ [0x%02.2B]\ [%03.3c:%l:%L]\ [%o:%p%%]
 highlight statusline guibg=white guifg=Blue
 
-:au WinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
+au WinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
 let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
-:au WinEnter * let w:m2=matchadd('ErrorMsg', '[ \t\r]\+$', -1)
+au WinEnter * let w:m2=matchadd('ErrorMsg', '[ \t\r]\+$', -1)
 let w:m2=matchadd('ErrorMsg', '[ \t\r]\+$', -1)
-:au WinEnter * let w:m2=matchadd('ErrorMsg', '[\t\r]', -1)
+au WinEnter * let w:m2=matchadd('ErrorMsg', '[\t\r]', -1)
 let w:m2=matchadd('ErrorMsg', '[\r\t]', -1)
 
 au BufNewFile,BufRead *.c++ set syntax=cpp
@@ -81,6 +83,5 @@ let g:localvimrc_ask = 0
 let g:autofenc_ext_prog_args = "-i -L ru"
 
 command Ctags :!pwd | xargs ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
-ab td /// @todo
 ab tdr /// @todo Remove it. If you see this message in production code, please report it to the author.
 ab tdi /// @todo Implement it.<CR>assert(false && "Not implemented");
