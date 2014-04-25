@@ -120,15 +120,12 @@ s=\$?; \
 if [ x$SCHROOT_CHROOT_NAME != 'x' ]; then \
 echo -n \"$IBlack($BRed$SCHROOT_CHROOT_NAME$IBlack)\"; \
 fi; \
-echo -n \"$IBlack[$BCyan\u$Cyan@\h$Black $BYellow\w\"; \
+echo -n \"$IBlack[$BCyan\u$Cyan@\h$Black $IYellow\w\"; \
 if [ -d .git ] && type git > /dev/null 2>&1; then \
 b=\$(git symbolic-ref --short -q HEAD 2>/dev/null); \
-if [ x\$b == 'x' ]; then b=\$(git symbolic-ref -q HEAD); else b=@\$b; fi; \
+if [ x\$b == 'x' ]; then b=\$(git symbolic-ref -q HEAD); fi; \
 if [ x\$b == 'x' ]; then b=\"(no branch)\"; fi; \
-echo -n \"$IBlack \"; \
-git status | grep \"nothing to commit\" > /dev/null 2>&1; \
-if [ \"\$?\" -eq \"0\" ]; then echo -n \"$Green\"; else echo -n \"$IRed\"; fi; \
-echo -n \"\$b\"; \
+echo -n \"$IBlack $IPurple@\$b\"; \
 fi; \
 echo -n \"$IBlack]\"; \
 if [ \$s -eq 0 ]; \
