@@ -121,11 +121,14 @@ if [ x$SCHROOT_CHROOT_NAME != 'x' ]; then \
 echo -n \"$IBlack($BRed$SCHROOT_CHROOT_NAME$IBlack)\"; \
 fi; \
 echo -n \"$IBlack[$BCyan\u$Cyan@\h$Black $IYellow\w\"; \
-if [ -d .git ] && type git > /dev/null 2>&1; then \
+if type git > /dev/null 2>&1; then \
+if git rev-parse --git-dir > /dev/null 2>&1 ; then \
 b=\$(git symbolic-ref --short -q HEAD 2>/dev/null); \
 if [ x\$b == 'x' ]; then b=\$(git symbolic-ref -q HEAD); fi; \
 if [ x\$b == 'x' ]; then b=\"(no branch)\"; fi; \
-echo -n \"$IBlack $IPurple@\$b\"; \
+if [ x\$b != 'x' ]; then b=\" $IPurple@\$b\"; fi; \
+echo -n \"$IBlack\$b\"; \
+fi; \
 fi; \
 echo -n \"$IBlack]\"; \
 if [ \$s -eq 0 ]; \
