@@ -3,6 +3,7 @@
     email = isn@extrn.org
 [core]
     whitespace = trailing-space,space-before-tab,tab-in-indent
+    excludesfile = ~/.gitignore
 [apply]
     whitespace = fix
 [log]
