@@ -124,9 +124,9 @@ echo -n \"$IBlack[$BCyan\u$Cyan@\h\"; \
 if type git > /dev/null 2>&1; then \
 if git rev-parse --git-dir > /dev/null 2>&1 ; then \
 b=\$(git symbolic-ref --short -q HEAD 2>/dev/null); \
-if [ x\$b == 'x' ]; then b=\$(git symbolic-ref -q HEAD); fi; \
-if [ x\$b == 'x' ]; then b=\"(no branch)\"; fi; \
-if [ x\$b != 'x' ]; then b=\"$IBlack $IPurple@\$b\"; fi; \
+if [ -z \"\$b\" ]; then b=\$(git symbolic-ref -q HEAD 2>/dev/null); fi; \
+if [ -z \"\$b\" ]; then b=\"(detached)\"; fi; \
+if [ \"\$b\" ]; then b=\"$IBlack $IPurple@\$b\"; fi; \
 echo -n \"\$b\"; \
 fi; \
 fi; \
