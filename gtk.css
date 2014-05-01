@@ -1,0 +1,11 @@
+@define-color active #181B1C;
+
+TerminalWindow .notebook {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+TerminalWindow .notebook tab:active {
+  background-color: shade(@active, 1);
+}
