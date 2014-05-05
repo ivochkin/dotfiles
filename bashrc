@@ -140,4 +140,4 @@ echo -n \"\\\$$Color_Off \"; \
 \`"
 export HISTCONTROL=ignoredups:erasedups HISTFILESIZE= HISTSIZE=
 shopt -s histappend
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}\007"'
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME} ${PWD}\007" | sed "s#/home/${USER}#~#"'
