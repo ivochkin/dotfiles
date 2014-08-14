@@ -58,6 +58,7 @@ au BufNewFile,BufRead *.c++ set syntax=cpp
 au BufNewFile,BufRead *.proto set syntax=proto
 au BufNewFile,BufRead *.ebnf set syntax=ebnf
 au BufNewFile,BufRead *.gprof set filetype=gprof
+au BufNewFile,BufRead *.md set filetype=markdown
 
 " use ,F to jump to tag in a vertical split
 nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
