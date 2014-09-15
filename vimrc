@@ -41,6 +41,8 @@ map! <S-Insert> <MiddleMouse>
 set termencoding=utf8
 set encoding=utf8
 set ff=unix
+set splitbelow
+set splitright
 set acd
 set scrolljump=5
 set scrolloff=5
@@ -65,6 +67,13 @@ nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("
 " use ,gf to go to file in a vertical split
 nnoremap <silent> ,gf :vertical botright wincmd f<CR>kkkkkk
 
+" Navigation shotcuts
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
 " vimdiff color scheme
 if &diff
      highlight DiffChange cterm=none ctermfg=black ctermbg=LightGreen gui=none guifg=bg guibg=LightGreen
@@ -85,3 +94,5 @@ let g:autofenc_ext_prog_args = "-i -L ru"
 command Ctags :!pwd | xargs ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
 ab tdr /// @todo Remove it. If you see this message in production code, please report it to the author.
 ab tdi /// @todo Implement it.<CR>assert(false && "Not implemented");
+
+execute pathogen#infect()
