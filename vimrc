@@ -12,8 +12,8 @@ set ignorecase
 set incsearch
 set nocompatible
 set hidden
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set nolist
 set showmatch
 set smarttab
