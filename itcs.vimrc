@@ -1,4 +1,2 @@
-set tabstop=5
-set shiftwidth=5
-set fileencoding=cp1251
-set ff=dos
+au FileType cpp set tabstop=5 shiftwidth=5 ff=dos bomb
+au FileType h   set tabstop=5 shiftwidth=5 ff=dos bomb
