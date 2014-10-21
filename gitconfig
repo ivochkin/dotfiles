@@ -17,6 +17,8 @@
     co = checkout
     d = diff --color
     dn = diff --color --name-only
+    dw = diff --color --ignore-all-space
+    dwn = diff --color --name-only --ignore-all-space
     b = branch -v --color
     p = pull -p
     bb = branch -va --color
