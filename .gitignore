@@ -1,3 +1,4 @@
 *.pyc
+*.swp
 vim/.VimballRecord
 vim/.netrwhist
