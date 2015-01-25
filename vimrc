@@ -89,6 +89,8 @@ let g:localvimrc_sandbox = 0
 let g:localvimrc_ask = 0
 let g:localvimrc_reverse = 1
 
+let NERDTreeIgnore = ['\.pyc$']
+
 let g:autofenc_ext_prog_args = "-i -L ru"
 
 command Ctags :!pwd | xargs ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
