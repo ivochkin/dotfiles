@@ -48,6 +48,7 @@ set scrolljump=5
 set scrolloff=5
 set hlsearch
 set laststatus=2
+set backspace=2
 set statusline=%F%m%r%h%w\ [Format=%{&ff}]\ [File=%{&fileencoding}]\ [Enc=%{&encoding}]\ [Type=%Y]\ [%03.3b]\ [0x%02.2B]\ [%03.3c:%l:%L]\ [%o:%p%%]
 highlight statusline guibg=white guifg=Blue
 
