@@ -54,8 +54,6 @@ highlight statusline guibg=white guifg=Blue
 
 au WinEnter * let w:m2=matchadd('ErrorMsg', '[ \t\r]\+$', -1)
 let w:m2=matchadd('ErrorMsg', '[ \t\r]\+$', -1)
-au WinEnter * let w:m2=matchadd('ErrorMsg', '[\t\r]', -1)
-let w:m2=matchadd('ErrorMsg', '[\r\t]', -1)
 
 au BufNewFile,BufRead *.c++ set syntax=cpp
 au BufNewFile,BufRead *.proto set syntax=proto

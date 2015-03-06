@@ -82,8 +82,8 @@ NewLine="\n"
 Jobs="\j"
 
 # Alias definitions.
-alias l='ls -lF --color=auto'
-alias ll='ls -laF --color=auto'
+alias l='ls -lF --color=auto --group-directories-first'
+alias ll='ls -laF --color=auto --group-directories-first'
 alias v='vim -p'
 alias vim.norc='vim -u NONE'
 alias hex='hexdump -C'
@@ -92,7 +92,6 @@ alias mm='make -j 8'
 alias ..='cd ..'
 alias sudo='sudo '
 alias xargs='xargs '
-alias go='git checkout'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
