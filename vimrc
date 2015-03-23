@@ -109,3 +109,4 @@ ab tdi /// @todo Implement it.<CR>assert(false && "Not implemented");
 set omnifunc=go#complete#Complete
 
 execute pathogen#infect()
+filetype plugin indent on
