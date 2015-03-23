@@ -21,7 +21,6 @@ set expandtab
 set smartcase
 set sidescroll=7
 set sidescrolloff=7
-set history=50000
 set showmode
 set cindent
 set nobackup
