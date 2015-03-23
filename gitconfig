@@ -4,6 +4,7 @@
 [core]
     whitespace = trailing-space,space-before-tab,tab-in-indent
     excludesfile = ~/.gitignore
+	quotepath = off
 [apply]
     whitespace = fix
 [log]
@@ -28,3 +29,7 @@
     i = log -n 1
 [color]
     ui = true
+[http]
+	proxy = http://127.0.0.1:3128
+[https]
+	proxy = http://127.0.0.1:3128
