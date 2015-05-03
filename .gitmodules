@@ -10,3 +10,6 @@
 [submodule "vim/bundle/YouCompleteMe"]
 	path = vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/bundle/synatastic"]
+	path = vim/bundle/synatastic
+	url = https://github.com/scrooloose/syntastic.git
