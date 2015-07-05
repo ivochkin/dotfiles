@@ -102,7 +102,10 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf = 0
 
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['pylint', 'pep8']
+let g:syntastic_check_on_open = 1
+let g:syntastic_python_pylint_args = "--max-line-length=132"
+let g:syntastic_python_pep8_args = "--max-line-length=132"
 
 command Ctags :!pwd | xargs ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
 ab tdr /// @todo Remove it. If you see this message in production code, please report it to the author.
