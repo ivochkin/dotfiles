@@ -1,10 +1,10 @@
 syntax enable
 colorscheme dante
 set undofile
-set undodir=~/.vim/undo
+set undodir=~/.vim/undo//
 set path+=~/src/
 set tags=tags;/
-set dir=~/.vim/swp
+set noswapfile
 set number
 set autoindent
 set wrap
@@ -111,7 +111,6 @@ command Ctags :!pwd | xargs ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
 ab tdr /// @todo Remove it. If you see this message in production code, please report it to the author.
 ab tdi /// @todo Implement it.<CR>assert(false && "Not implemented");
 
-set omnifunc=go#complete#Complete
-
 execute pathogen#infect()
 filetype plugin indent on
+syntax on
