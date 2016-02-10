@@ -29,3 +29,7 @@
     i = log -n 1
 [color]
     ui = true
+[merge]
+    tool = gvimdiff
+    conflictstyle = diff3
+    tool = prompt
