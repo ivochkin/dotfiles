@@ -87,7 +87,7 @@ let g:localvimrc_sandbox = 0
 let g:localvimrc_ask = 0
 let g:localvimrc_reverse = 1
 
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.vcxproj*']
 
 let g:autofenc_ext_prog_args = "-i -L ru"
 
