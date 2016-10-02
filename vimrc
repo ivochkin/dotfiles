@@ -1,5 +1,4 @@
 syntax enable
-colorscheme dante
 set undofile
 set undodir=~/.vim/undo//
 set path+=~/src/
@@ -114,3 +113,8 @@ ab tdi /// @todo Implement it.<CR>assert(false && "Not implemented");
 execute pathogen#infect()
 filetype plugin indent on
 syntax on
+
+set background=dark
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
