@@ -16,3 +16,6 @@
 [submodule "vim/bundle/plantuml"]
 	path = vim/bundle/plantuml
 	url = https://github.com/aklt/plantuml-syntax.git
+[submodule "vim/bundle/dash.vim"]
+        path = vim/bundle/dash.vim
+        url = https://github.com/rizzatti/dash.vim.git
