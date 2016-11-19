@@ -97,9 +97,14 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias g="ack-grep --type-add cpp=.c++"
 alias time="/usr/bin/time -v"
-alias json_pretty="python -mjson.tool"
+alias json-pretty="python -mjson.tool"
 alias cmakedbg="cmake -DCMAKE_BUILD_TYPE=Debug"
 alias cmakerel="cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo"
+alias clipboard='xclip -sel clip'
+set_term_title() {
+  echo -ne "\033]0;$@\007"
+}
+alias set-term-title=set_term_title
 
 
 # enable programmable completion features (you don't need to enable
