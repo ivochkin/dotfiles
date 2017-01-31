@@ -81,6 +81,12 @@ PathFull="\W"
 NewLine="\n"
 Jobs="\j"
 
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  NPROC=$(nproc)
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  NPROC=$(sysctl -n hw.ncpu)
+fi
+
 # Alias definitions.
 alias l='ls -lF --color=auto --group-directories-first'
 alias ll='ls -laF --color=auto --group-directories-first'
@@ -88,7 +94,7 @@ alias v='vim -p'
 alias vim.norc='vim -u NONE'
 alias hex='hexdump -C'
 alias m='make'
-alias mm='make -j'
+alias mm='make -j$NPROC'
 alias ..='cd ..'
 alias sudo='sudo '
 alias xargs='xargs '
