@@ -33,3 +33,5 @@
     tool = gvimdiff
     conflictstyle = diff3
     tool = prompt
+[credential]
+    helper = cache --timeout=31536000
