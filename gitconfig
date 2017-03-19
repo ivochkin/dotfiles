@@ -30,7 +30,7 @@
 [color]
     ui = true
 [merge]
-    tool = gvimdiff
+    tool = meld
     conflictstyle = diff3
     tool = prompt
 [credential]
