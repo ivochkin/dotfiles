@@ -92,6 +92,8 @@ let g:localvimrc_reverse = 1
 
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.vcxproj*']
 
+let g:tagbar_sort = 0
+
 let g:autofenc_ext_prog_args = "-i -L ru"
 
 let g:go_highlight_functions = 1
