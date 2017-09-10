@@ -8,7 +8,7 @@ set tags=tags;/
 set noswapfile
 set number
 set autoindent
-set wrap
+set nowrap
 set ignorecase
 set incsearch
 set nocompatible
@@ -54,8 +54,6 @@ highlight statusline guibg=white guifg=Blue
 
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '[ \t\r]\+$', -1)
 let w:m2=matchadd('ErrorMsg', '[ \t\r]\+$', -1)
-au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 au BufNewFile,BufRead *.c++ set syntax=cpp
 au BufNewFile,BufRead *.proto set syntax=proto
