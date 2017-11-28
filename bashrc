@@ -111,7 +111,14 @@ alias clipboard='xclip -sel clip'
 set_term_title() {
   echo -ne "\033]0;$@\007"
 }
-alias set-term-title=set_term_title
+alias set-term-title='set_term_title'
+alias d='docker'
+alias dc='docker-compose'
+alias awk1="awk '{print \$1}'"
+alias awk2="awk '{print \$2}'"
+alias awk3="awk '{print \$3}'"
+alias awk4="awk '{print \$4}'"
+alias awk5="awk '{print \$5}'"
 
 
 # enable programmable completion features (you don't need to enable
