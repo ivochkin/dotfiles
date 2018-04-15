@@ -119,6 +119,10 @@ alias awk2="awk '{print \$2}'"
 alias awk3="awk '{print \$3}'"
 alias awk4="awk '{print \$4}'"
 alias awk5="awk '{print \$5}'"
+alias awk6="awk '{print \$6}'"
+alias awk7="awk '{print \$7}'"
+alias awk8="awk '{print \$8}'"
+alias awk9="awk '{print \$9}'"
 
 
 # enable programmable completion features (you don't need to enable
@@ -175,4 +179,11 @@ transfer() {
   fi;
   cat $tmpfile;
   rm -f $tmpfile;
+}
+
+docker-cleanup() {
+  cleanup_images=$(cat ~/.docker-cleanup-images)
+  docker ps -a | tail -n +2 | awk '{print $1}' | xargs docker rm -f
+  docker image prune -f
+  docker images | egrep "none|$cleanup_images" | tail -n +2 | awk '{print $3}' | xargs docker rmi -f
 }
