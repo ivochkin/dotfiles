@@ -185,6 +185,6 @@ docker-cleanup() {
   cleanup_images=$(cat ~/.docker-cleanup-images)
   docker ps -a | tail -n +2 | awk '{print $1}' | xargs docker rm -f
   docker image prune -f
-  docker images | egrep "none|$cleanup_images" | tail -n +2 | awk '{print $3}' | xargs docker rmi -f
+  docker images | egrep "none|$cleanup_images" | awk '{print $3}' | xargs docker rmi -f
   docker network prune -f
 }
