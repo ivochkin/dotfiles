@@ -123,6 +123,9 @@ alias awk6="awk '{print \$6}'"
 alias awk7="awk '{print \$7}'"
 alias awk8="awk '{print \$8}'"
 alias awk9="awk '{print \$9}'"
+alias py="python"
+alias py2="python2"
+alias py3="python3"
 
 
 # enable programmable completion features (you don't need to enable
