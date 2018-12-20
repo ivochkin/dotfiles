@@ -102,7 +102,7 @@ alias xargs='xargs '
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias g="ack-grep --type-add cpp=.c++"
+alias g="ack --type-add cpp=.c++"
 alias time="/usr/bin/time -v"
 alias json-pretty="python -mjson.tool"
 alias cmakedbg="cmake -DCMAKE_BUILD_TYPE=Debug"
