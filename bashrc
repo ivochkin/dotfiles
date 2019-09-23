@@ -190,4 +190,5 @@ docker-cleanup() {
   docker image prune -f
   docker images | egrep "none|$cleanup_images" | awk '{print $3}' | xargs docker rmi -f
   docker network prune -f
+  docker volume prune -f
 }
