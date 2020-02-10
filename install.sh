@@ -9,6 +9,7 @@
 [ -e ~/.gdb ] || ln -s $(pwd)/gdb ~/.gdb
 [ -e ~/.gdbinit ] || ln -s $(pwd)/gdbinit ~/.gdbinit
 [ -e ~/.pdbrc.py ] || ln -s $(pwd)/pdbrc.py ~/.pdbrc.py
+[ -e ~/.tmux.conf ] || ln -s $(pwd)/tmux.conf ~/.tmux.conf
 
 bashrc_tag="a70634b1-ff48-4124-89c4-aa7b93584f90"
 if ! grep -q $bashrc_tag ~/.bashrc ; then
