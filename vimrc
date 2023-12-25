@@ -13,8 +13,8 @@ set ignorecase
 set incsearch
 set nocompatible
 set hidden
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set nolist
 set showmatch
 set smarttab
@@ -33,6 +33,7 @@ set mousehide
 set novisualbell
 set t_vb=
 set wildmenu
+set wildignore+=*build/*,*build-*/,*.swp,*.so,*.a
 set wcm=<Tab>
 set mouse=a
 set mousemodel=popup
@@ -49,7 +50,7 @@ set scrolloff=5
 set hlsearch
 set laststatus=2
 set backspace=2
-set statusline=%F%m%r%h%w\ [Format=%{&ff}]\ [File=%{&fileencoding}]\ [Enc=%{&encoding}]\ [Type=%Y]\ [%03.3b]\ [0x%02.2B]\ [%03.3c:%l:%L]\ [%o:%p%%]
+set statusline=%F%m%r%h%w%=\ [%Y/%{&ff}/%{&fileencoding}/%{&encoding}]\ [%03.3c:%l:%p%%]
 highlight statusline guibg=white guifg=Blue
 
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '[ \t\r]\+$', -1)
@@ -88,7 +89,10 @@ let g:localvimrc_sandbox = 0
 let g:localvimrc_ask = 0
 let g:localvimrc_reverse = 1
 
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.vcxproj*']
+let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.vcxproj*']
+let g:NERDTreeStatusline = "  "
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
 
 let g:tagbar_sort = 0
 
@@ -104,14 +108,15 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_always_populate_location_list = 1
+let g:ycm_clangd_args = ['--clang-tidy']
 
 let g:syntastic_python_checkers = ['pylint', 'pep8']
 let g:syntastic_check_on_open = 1
 let g:syntastic_python_pylint_args = "--max-line-length=132"
 let g:syntastic_python_pep8_args = "--max-line-length=132"
 
-command Ictags :!pwd | xargs ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
 command Igoto :YcmCompleter GoTo
+command Ifind :CtrlP
 ab tdr /// @todo Remove it. If you see this message in production code, please report it to the author.
 ab tdi /// @todo Implement it.<CR>assert(false && "Not implemented");
 

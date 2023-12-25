@@ -94,15 +94,17 @@ alias v='vim -p'
 alias vim.norc='vim -u NONE'
 alias hex='hexdump -C'
 alias m='make'
-alias mm='make -j$NPROC'
-alias n='nose2 -v'
+alias mm='make -j16'
+alias n='ninja'
+alias nn='ninja -j16'
 alias ..='cd ..'
 alias sudo='sudo '
 alias xargs='xargs '
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias g="ack --type-add cpp=.c++"
+alias g="ack --type-add cpp=.c++ --ignore-dir=build"
+alias f="find . -name "
 alias time="/usr/bin/time -v"
 alias json-pretty="python -mjson.tool"
 alias cmakedbg="cmake -DCMAKE_BUILD_TYPE=Debug"
@@ -123,7 +125,7 @@ alias awk6="awk '{print \$6}'"
 alias awk7="awk '{print \$7}'"
 alias awk8="awk '{print \$8}'"
 alias awk9="awk '{print \$9}'"
-alias py="python"
+alias py="python3"
 alias py2="python2"
 alias py3="python3"
 
@@ -136,6 +138,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 export VIMHOME='~/.vim'
+export TMUX_TMPDIR='~/.tmux'
 export SVN_EDITOR='/usr/bin/vim'
 export GIT_EDITOR='/usr/bin/vim'
 export EDITOR='/usr/bin/vim'
@@ -192,3 +195,6 @@ docker-cleanup() {
   docker network prune -f
   docker volume prune -f
 }
+
+VIRTUALENVWRAPPER_PYTHON=$(which python3)
+source /usr/local/bin/virtualenvwrapper.sh
